@@ -13,7 +13,7 @@ rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
 });
 
 rl.on('close', () => {
-  if (isInteractive === true) {
+  if (isInteractive === false) {
     console.log('This important software is now closing');
   }
 });
