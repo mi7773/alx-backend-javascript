@@ -1,5 +1,7 @@
 const readline = require('readline');
 
+const isInteractive = process.stdin.isTTY;
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -7,6 +9,11 @@ const rl = readline.createInterface({
 
 rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
   console.log(`Your name is: ${name}`);
-  console.log('This important software is now closing');
   rl.close();
+});
+
+rl.on('close', () => {
+  if (isInteractive === true) {
+    console.log('This important software is now closing');
+  }
 });
