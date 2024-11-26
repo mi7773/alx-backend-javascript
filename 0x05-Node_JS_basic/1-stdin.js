@@ -6,7 +6,11 @@ const rl = readline.createInterface({
 });
 
 rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
-  console.log(`Your name is: ${name}`);
-  console.log('This important software is now closing');
+  if (process.stdin.isTTY === true) {
+    console.log(`Your name is: ${name}`);
+  } else {
+    console.log(`Your name is: ${name}`);
+    console.log('This important software is now closing');
+  }
   rl.close();
 });
