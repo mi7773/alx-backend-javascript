@@ -16,3 +16,7 @@ rl.question('', (name) => {
 rl.on('close', () => {
   console.log('This important software is now closing');
 });
+
+rl.on('exit', () => {
+  console.log('This important software is now closing');
+});
