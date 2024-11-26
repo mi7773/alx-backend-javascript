@@ -1,7 +1,5 @@
 const readline = require('readline');
 
-const isInteractive = process.stdin.isTTY;
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
