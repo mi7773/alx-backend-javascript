@@ -15,7 +15,7 @@ describe('Index page', () => {
         if (err) return done(err);
 
         expect(res.statusCode).to.equal(200);
-        expect(body.message).to.equal('Welcome to the payment system');
+        expect(body).to.equal('Welcome to the payment system');
         done();
       }
     );
