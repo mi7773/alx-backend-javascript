@@ -21,4 +21,8 @@ describe('CalculateNumber', () => {
   it('-1.5 + 3.7 should return 3', () => {
     assert.strictEqual(calculateNumber(-1.5, 3.7), 3);
   });
+
+  it('0 + 3.7 should return 4', () => {
+    assert.strictEqual(calculateNumber(0, 3.7), 4);
+  });
 });
