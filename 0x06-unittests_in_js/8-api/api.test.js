@@ -1,5 +1,3 @@
-const app = require('./api');
-
 const request = require('request');
 const chai = require('chai');
 const expect = chai.expect;
