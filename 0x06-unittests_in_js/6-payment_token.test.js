@@ -5,8 +5,8 @@ describe('getPaymentTokenFromAPI', () => {
   it('Should return true', (done) => {
     getPaymentTokenFromAPI(true)
       .then((result) => {
-        assert.strictEqual(result, {data: 'Successful response from the API' });
+        assert.deepEqual(result, {data: 'Successful response from the API' });
+        done();
       });
-    done();
-  })
+  });
 })
