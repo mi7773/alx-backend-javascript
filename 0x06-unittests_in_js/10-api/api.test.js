@@ -33,7 +33,7 @@ describe('Available payments', () => {
   it('Should return an object with status 200', (done) => {
     request.get('http://localhost:7865/available_payments', (err, res, body) => {
       expect(res.statusCode).to.equal(200);
-      expect(JSON.parse(body)).to.equal({
+      expect(JSON.parse(body)).to.deep.equal({
         payment_methods: {
           credit_cards: true,
           paypal: false
